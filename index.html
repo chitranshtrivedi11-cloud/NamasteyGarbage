@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namaste Garbage — Indore Civic Visibility Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="navbar glass">
+        <div class="logo">Namaste Garbage</div>
+        <nav class="nav-links desktop-only">
+          <button class="nav-link" data-view="landing">Home</button>
+          <button class="nav-link" data-view="map">Issue Map</button>
+          <button class="nav-link" data-view="dashboard">Dashboard</button>
+        </nav>
+        <button class="btn btn-primary" id="open-report-nav">Report Garbage</button>
+      </header>
+
+      <main id="view-container"></main>
+
+      <nav class="bottom-nav mobile-only glass">
+        <button class="nav-link" data-view="landing">Home</button>
+        <button class="nav-link" data-view="map">Map</button>
+        <button class="nav-link" data-view="dashboard">Stats</button>
+        <button class="btn btn-primary" id="open-report-mobile">Report</button>
+      </nav>
+
+      <button class="floating-report mobile-only" id="open-report-fab">Report</button>
+
+      <footer class="footer">
+        <div>
+          <h4>Namaste Garbage</h4>
+          <p>Visibility-first civic reporting. Built for accountability, starting with Indore.</p>
+        </div>
+        <div>
+          <p>This platform is independent.</p>
+        </div>
+      </footer>
+    </div>
+
+    <div class="modal hidden" id="report-modal">
+      <div class="modal-overlay" id="close-modal"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Report Flow</h3>
+          <button id="close-modal-btn">✕</button>
+        </div>
+        <div class="stepper" id="stepper"></div>
+        <div id="report-step-content"></div>
+      </div>
+    </div>
+
+    <script src="data/cityConfig.js"></script>
+    <script src="data/mockData.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
